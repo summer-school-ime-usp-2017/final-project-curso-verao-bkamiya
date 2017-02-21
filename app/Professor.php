@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Curso extends Model
+class Professor extends Model
 {
     //
+    protect $table = 'professores';
+
     protected $fillable = [
-      'nome', 'descricao', 'cargaHoraria'
+      'nome', 'email'
     ];
 }

@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Curso extends Model
+class Inscricao extends Model
 {
     //
+    protect $table = 'inscricoes';
+
     protected $fillable = [
-      'nome', 'descricao', 'cargaHoraria'
+      'aluno_id', 'turma_id'
     ];
 }
