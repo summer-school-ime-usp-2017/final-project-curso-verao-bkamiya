@@ -18,7 +18,9 @@ class TurmaController extends Controller
 
     public function cria()
     {
-      return view('turma.cria');
+      $cursos = Curso::all();
+      $professores = Professor::all();
+      return view('turma.cria', compact('cursos', 'professores'));
     }
 
     public function armazena()

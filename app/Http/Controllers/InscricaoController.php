@@ -13,7 +13,7 @@ class InscricaoController extends Controller
     public function index()
     {
       $inscricoes = Inscricao::all();
-      return view('inscricao.index', compact('incricoes'));
+      return view('inscricao.index', compact('inscricoes'));
     }
 
     public function cria()
@@ -24,6 +24,6 @@ class InscricaoController extends Controller
     public function armazena()
     {
       Inscricao::create(request()->all());
-      return redirect('/incricoes');
+      return redirect('/inscricoes');
     }
 }

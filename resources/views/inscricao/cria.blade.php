@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-@section('title', 'Cadastro de curso')
+@section('title', 'Cadastro de inscrições')
 
-@section('page-header-content', 'Cadastro de curso')
+@section('page-header-content', 'Cadastro de inscrições')
 
 @section('content')
 
@@ -13,7 +13,7 @@
           <h3 class="panel-title">Ações</h3>
         </div>
         <div class="panel-body">
-          <a href="/cursos">
+          <a href="/inscricoes">
             <span class="glyphicon glyphicon-th-list"> Cursos</span>
           </a>
         </div>
@@ -29,7 +29,7 @@
           </ul>
         </div>
       @endif
-      <form action="/cursos" method="POST">
+      <form action="/inscricoes" method="POST">
         {{ csrf_field() }}
         <div class="form-group">
           <label for="nome">Nome</label>

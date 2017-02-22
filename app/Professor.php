@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Professor extends Model
 {
     //
-    protect $table = 'professores';
+    protected $table = 'professores';
+
+    public function turmas()
+    {
+      return $this->hasMany(Turma::class);
+    }
 
     protected $fillable = [
       'nome', 'email'

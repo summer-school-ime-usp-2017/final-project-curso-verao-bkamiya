@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Turma extends Model
 {
     //
+    public function inscricoes()
+    {
+      return $this->hasMany(Inscricao::class);
+    }
+
     public function curso()
     {
      return $this->belongsTo(Curso::class);

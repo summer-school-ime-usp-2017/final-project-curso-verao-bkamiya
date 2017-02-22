@@ -13,7 +13,7 @@
           <h3 class="panel-title">Ações</h3>
         </div>
         <div class="panel-body">
-          <a href="/incricoes/cria">
+          <a href="/inscricoes/cria">
             <span class="glyphicon glyphicon-plus"></span> Inscrições
           </a>
         </div>
@@ -29,7 +29,7 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($incricoes as $inscricao)
+          @foreach($inscricoes as $inscricao)
           <tr>
             <td>{{ $inscricao->id }}</td>
             <td>{{ $inscricao->nome }}</td>
