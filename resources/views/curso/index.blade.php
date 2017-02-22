@@ -30,7 +30,7 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($alunos as $aluno)
+          @foreach($cursos as $curso)
           <tr>
             <td>{{ $curso->id }}</td>
             <td>{{ $curso->nome }}</td>

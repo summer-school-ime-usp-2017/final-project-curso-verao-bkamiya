@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-@section('title', 'Alunos')
+@section('title', 'Professores')
 
-@section('page-header-content', 'Alunos')
+@section('page-header-content', 'Professores')
 
 @section('content')
 
@@ -13,8 +13,8 @@
           <h3 class="panel-title">Ações</h3>
         </div>
         <div class="panel-body">
-          <a href="/alunos/cria">
-            <span class="glyphicon glyphicon-plus"></span> Alunos
+          <a href="/professores/cria">
+            <span class="glyphicon glyphicon-plus"></span> Professores
           </a>
         </div>
       </div>
@@ -29,11 +29,11 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($alunos as $aluno)
+          @foreach($professores as $professor)
           <tr>
-            <td>{{ $aluno->id }}</td>
-            <td>{{ $aluno->nome }}</td>
-            <td>{{ $aluno->email }}</td>
+            <td>{{ $professor->id }}</td>
+            <td>{{ $professor->nome }}</td>
+            <td>{{ $professor->email }}</td>
           </tr>
           @endforeach
         </tbody>
