@@ -19,6 +19,7 @@ class AlunoController extends Controller
       return view('aluno.cria');
     }
 
+
     public function armazena()
     {
      $this->validate(request(), [
@@ -27,6 +28,24 @@ class AlunoController extends Controller
       ]);
       Aluno::create(request()->all());
       return redirect('/alunos');
+    }
+
+    public function edita($id)
+    {
+      $aluno = Aluno::find($id);
+      return view('aluno.edita', compact('aluno'));
+      $aluno->save();
+    }
+
+    public function atualiza($id)
+    {
+       $aluno->fill(request()->all());
+       $aluno->save();
+    } 
+
+    public function show(Aluno $aluno)
+    {
+     return view('aluno.show', compact('aluno'));
     }
 
 }

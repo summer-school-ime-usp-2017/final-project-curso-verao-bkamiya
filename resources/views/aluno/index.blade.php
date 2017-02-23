@@ -17,6 +17,11 @@
             <span class="glyphicon glyphicon-plus"></span> Alunos
           </a>
         </div>
+        <div class="panel-body">
+          <a href="/alunos/edita">
+            <span class="glyphicon glyphicon-pencil"></span> Alunos
+          </a>
+        </div>
       </div>
     </div>
     <div class="col-md-6">

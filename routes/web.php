@@ -19,6 +19,10 @@ Route::get('/alunos', 'AlunoController@index');
 
 Route::get('/alunos/cria', 'AlunoController@cria');
 
+Route::get('/alunos/edita/{id}', 'AlunoController@edita');
+
+Route::get('/alunos/{aluno}', 'AlunoController@show');
+
 Route::post('/alunos', 'AlunoController@armazena');
 
 Route::get('/cursos', 'CursoController@index');
