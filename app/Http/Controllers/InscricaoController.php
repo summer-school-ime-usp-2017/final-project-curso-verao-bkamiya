@@ -18,7 +18,9 @@ class InscricaoController extends Controller
 
     public function cria()
     {
-      return view('inscricao.cria');
+      $alunos = Aluno::all();
+      $turmas = Turma::all();
+      return view('inscricao.cria', compact('alunos', 'turmas'));
     }
 
     public function armazena()

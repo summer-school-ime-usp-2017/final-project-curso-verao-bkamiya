@@ -8,10 +8,15 @@ class Inscricao extends Model
 {
     //
 
-    public function turmas()
-    {
-      return $this->hasMany(Turma::class);
-    }
+      public function aluno()
+      {
+       return $this->belongsTo(Aluno::class);
+      }
+
+     public function turma()
+     {
+      return $this->belongsTo(Turma::class);
+     }
 
     protected $table = 'inscricoes';
 

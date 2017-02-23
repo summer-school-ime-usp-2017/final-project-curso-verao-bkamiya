@@ -24,16 +24,18 @@
         <thead>
           <tr>
             <th>Id</th>
-            <th>Nome</th>
-            <th>Email</th>
+            <th>Curso</th>
+            <th>Período</th>
+            <th>Professor</th>
           </tr>
         </thead>
         <tbody>
           @foreach($turmas as $turma)
           <tr>
             <td>{{ $turma->id }}</td>
-            <td>{{ $turma->nome }}</td>
-            <td>{{ $turma->email }}</td>
+            <td>{{ $turma->curso->nome }}</td>
+            <td>{{ $turma->periodo }}</td>
+            <td>{{ $turma->professor->nome }}</td>        
           </tr>
           @endforeach
         </tbody>
