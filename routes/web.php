@@ -21,7 +21,9 @@ Route::get('/alunos/cria', 'AlunoController@cria');
 
 Route::get('/alunos/edita/{id}', 'AlunoController@edita');
 
-Route::get('/alunos/{aluno}', 'AlunoController@show');
+Route::get('/alunos/{id}', 'AlunoController@atualiza');
+
+Route::get('/alunos/detalhe/{aluno}', 'AlunoController@show');
 
 Route::post('/alunos', 'AlunoController@armazena');
 

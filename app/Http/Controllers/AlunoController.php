@@ -34,18 +34,18 @@ class AlunoController extends Controller
     {
       $aluno = Aluno::find($id);
       return view('aluno.edita', compact('aluno'));
-      $aluno->save();
     }
 
-    public function atualiza($id)
+  public function atualiza($id)
     {
-       $aluno->fill(request()->all());
-       $aluno->save();
-    } 
+      $aluno = Aluno::find($id);
+      $aluno->fill(request()->all());
+      $aluno->save();
+      return redirect('/alunos');
+    }
 
-    public function show(Aluno $aluno)
+  public function show(Aluno $aluno)
     {
      return view('aluno.show', compact('aluno'));
-    }
-
+   }
 }

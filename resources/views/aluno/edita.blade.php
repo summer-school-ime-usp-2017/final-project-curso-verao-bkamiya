@@ -14,7 +14,7 @@
           </div>
           <div class="panel-body">
             <a href="/alunos">
-              <span class="glyphicon glyphicon-pencil"></span> Alunos
+              <span class="glyphicon glyphicon-th-list"></span> Alunos
             </a>
           </div>
         </div>
@@ -26,11 +26,11 @@
 
           <div class="form-group">
             <label for="nome">Nome</label>
-            <input name="nome" id="nome" type="text" class="form-control">
+            <input value = {{ $aluno->nome }} name="nome" id="nome" type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input name="email" id="email" type="text" class="form-control">
+            <input value = {{ $aluno->email }} name="email" id="email" type="text" class="form-control">
           </div>
           <button class="btn btn-primary">Editar</button>
         </form>

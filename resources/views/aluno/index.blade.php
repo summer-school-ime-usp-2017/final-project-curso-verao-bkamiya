@@ -17,11 +17,6 @@
             <span class="glyphicon glyphicon-plus"></span> Alunos
           </a>
         </div>
-        <div class="panel-body">
-          <a href="/alunos/edita">
-            <span class="glyphicon glyphicon-pencil"></span> Alunos
-          </a>
-        </div>
       </div>
     </div>
     <div class="col-md-6">
@@ -31,6 +26,7 @@
             <th>Id</th>
             <th>Nome</th>
             <th>Email</th>
+            <th>#</th>
           </tr>
         </thead>
         <tbody>
@@ -39,6 +35,7 @@
             <td>{{ $aluno->id }}</td>
             <td>{{ $aluno->nome }}</td>
             <td>{{ $aluno->email }}</td>
+            <td><a href="/alunos/edita/{{ $aluno->id }}">Editar</a></td>
           </tr>
           @endforeach
         </tbody>
